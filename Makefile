@@ -1,6 +1,6 @@
 
 .PHONY: all
-all: ferris_sweep cantor_remix reviung34 splitkb_sweep
+all: ferris_sweep cantor_remix reviung34 splitkb_sweep moonlander
 
 ### Ferris Sweep
 
@@ -49,4 +49,15 @@ splitkb_sweep:
 .PHONY: splitkb_sweep_flash
 splitkb_sweep_flash: splitkb_sweep
 	@cd qmk_firmware && make splitkb/aurora/sweep/rev1:tlj:flash
+
+### ZSA Moonlander
+
+.PHONY: moonlander
+moonlander:
+	@echo "Compiling ZSA Moonlander tlj keymap..."
+	@cd zsa_firmware && make moonlander:tlj
+
+.PHONY: moonlander_flash
+moonlander_flash: moonlander
+	@cd zsa_firmware && make moonlander:tlj:flash
 
