@@ -1,0 +1,12 @@
+
+OLED_ENABLE = yes
+LTO_ENABLE = yes
+WPM_ENABLE = yes
+
+ENCODER_ENABLE = no
+CONVERT_TO = liatris
+
+# test RGB
+RGBLIGHT_ENABLE = no
+RGB_MATRIX_ENABLE = yes
+
