@@ -1,0 +1,5 @@
+CompileFlags:
+  Add: [-Wno-unknown-attributes, -Wno-maybe-uninitialized, -Wno-unknown-warning-option]
+  Remove: [-W*, -mcall-prologues]
+  Compiler: clang
+  CompilationDatabase: /Users/thomas/src/keyboards/qmk_firmware
