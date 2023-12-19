@@ -1,3 +1,4 @@
+#include "keycodes.h"
 #include QMK_KEYBOARD_H
 #include "tlj.h"
 
@@ -7,7 +8,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __________________ALPHA1_L1__________, __________________ALPHA1_R1__________,
         __________________ALPHA1_L2__________, __________________ALPHA1_R2__________,
         __________________ALPHA1_L3__________, __________________ALPHA1_R3__________,
-                             KC_MEBS, KC_MEHT, KC_SYMC
+                             KC_SYBS, KC_MEHT, KC_SYMC
     ),
 	[_SYMBOLS] = LAYOUT_wrapper(
         __________________SYMBOL_L1__________, __________________SYMBOL_R1__________,

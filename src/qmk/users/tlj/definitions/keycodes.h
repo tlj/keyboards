@@ -31,6 +31,7 @@ enum unicode_names {
 #define KC_ALTS RALT_T(KC_SCLN)
 #define KC_NORC LT(_NORDIC, KC_C)
 #define KC_SYMC LT(_SYMBOLS, KC_SPC)
+#define KC_SYBS LT(_SYMBOLS, KC_BSPC)
 #define KC_MEHT MEH_T(KC_TAB)
 #define KC_MEBS LT(_MEDIA, KC_BSPC)
 #define KC_GUIR LGUI(KC_R)
