@@ -61,3 +61,16 @@ moonlander:
 moonlander_flash: moonlander
 	@cd zsa_firmware && make moonlander:tlj:flash
 
+.PHONY: reviung34_zmk
+reviung34_zmk:
+	@cd zmk && \
+		export ZEPHYR_SDK_INSTALL_DIR=~/.local/zephyr-sdk-0.15.0 && \
+		export ZEPHYR_TOOLCHAIN_VARIANT=zephyr && \
+		source zephyr/zephyr-env.sh && \
+		export PATH=$$HOME/Library/Python/3.11/bin:$$PATH && \
+		west build --pristine -s zmk/app --board nice_nano_v2 -s ~/src/keyboards/zmk/app -- -DZMK_CONFIG=$$HOME/src/keyboards/zmk-config/config -DSHIELD="reviung34"
+
+.PHONY: reviung34_zmk_flash
+reviung34_zmk_flash: reviung34_zmk
+	@cd zmk && \
+		west flash

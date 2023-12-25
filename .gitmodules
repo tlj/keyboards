@@ -4,3 +4,9 @@
 [submodule "zsa_firmware"]
 	path = zsa_firmware
 	url = https://github.com/zsa/qmk_firmware
+[submodule "zmk"]
+	path = zmk
+	url = https://github.com/zmkfirmware/zmk
+[submodule "zmk-config"]
+	path = zmk-config
+	url = https://github.com/tlj/zmk-config.git
