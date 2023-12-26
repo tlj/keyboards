@@ -8,7 +8,7 @@ if [[ ! -d "$ZMK_HOME" ]]
 then
     INIT=true
     echo "Add git sub-modules..."
-    git submodule add -f https://github.com/zmkfirmware/zmk
+    git submodule add -f https://github.com/tlj/zmk
 fi
 echo "Update git sub-modules..."
 git submodule sync --recursive

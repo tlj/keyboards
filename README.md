@@ -20,5 +20,6 @@ make all
 - [Cantor Remix](https://github.com/nilokr/cantor-remix)
 - [Ferris Sweep](https://github.com/davidphilipbarr/Sweep)
 - [Reviung34 Split MK.II](https://github.com/gtips/reviung/tree/master/reviung34split_Mk-II)
+- [Reviung34 Split MK.II](https://github.com/gtips/reviung/tree/master/reviung34split_Mk-II) (wireless zmk)
 - [Splitkb Aurora Sweep](https://splitkb.com/products/aurora-sweep)
 - [ZSA Moonlander](https://www.zsa.io/moonlander/)

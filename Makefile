@@ -70,6 +70,12 @@ reviung34_zmk:
 		export PATH=$$HOME/Library/Python/3.11/bin:$$PATH && \
 		west build --pristine -s zmk/app --board nice_nano_v2 -s ~/src/keyboards/zmk/app -- -DZMK_CONFIG=$$HOME/src/keyboards/zmk-config/config -DSHIELD="reviung34"
 
+.PHONY: reviung34_svg
+reviung34_svg:
+	@keymap parse -c 10 -z zmk-config/config/reviung34.keymap > reviung34.yaml
+	@keymap draw reviung34.yaml > images/reviung34.svg
+	@rm reviung34.yaml
+
 .PHONY: reviung34_zmk_flash
 reviung34_zmk_flash: reviung34_zmk
 	@cd zmk && \

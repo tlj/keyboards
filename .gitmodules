@@ -6,7 +6,7 @@
 	url = https://github.com/zsa/qmk_firmware
 [submodule "zmk"]
 	path = zmk
-	url = https://github.com/zmkfirmware/zmk
+	url = https://github.com/tlj/zmk
 [submodule "zmk-config"]
 	path = zmk-config
 	url = https://github.com/tlj/zmk-config.git
