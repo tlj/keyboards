@@ -7,6 +7,6 @@
 [submodule "zmk"]
 	path = zmk
 	url = https://github.com/tlj/zmk
-[submodule "zmk-config"]
-	path = zmk-config
-	url = https://github.com/tlj/zmk-config.git
+[submodule "zmk-config/zmk-nodefree-config"]
+	path = zmk-config/zmk-nodefree-config
+	url = https://github.com/urob/zmk-nodefree-config.git
