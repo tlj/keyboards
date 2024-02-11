@@ -1,6 +1,6 @@
 
 .PHONY: all
-all: ferris_sweep cantor_remix reviung34 splitkb_sweep moonlander
+all: ferris_sweep cantor_remix reviung34 splitkb_sweep moonlander charybdis_nano
 
 ### Ferris Sweep
 
@@ -50,6 +50,17 @@ splitkb_sweep:
 splitkb_sweep_flash: splitkb_sweep
 	@cd qmk_firmware && make splitkb/aurora/sweep/rev1:tlj:flash
 
+### BastardKB Charybdis Nano
+
+.PHONY: charybdis_nano
+charybdis_nano:
+	@echo "Compiling BastardKB Charybdis Nano tlj keymap..."
+	@cd qmk_firmware && make bastardkb/charybdis/3x5/v2/splinky_3:tlj
+
+.PHONY: charybdis_nano_flash
+charybdis_nano_flash: charybdis_nano
+	@cd qmk_firmware && make bastardkb/charybdis/3x5/v2/splinky_3:tlj:flash
+
 ### ZSA Moonlander
 
 .PHONY: moonlander
@@ -80,3 +91,4 @@ reviung34_svg:
 reviung34_zmk_flash: reviung34_zmk
 	@cd zmk && \
 		west flash
+

@@ -5,6 +5,7 @@ TAP_DANCE_ENABLE  = no
 UNICODE_COMMON    = yes
 UNICODE_ENABLE    = no
 UNICODEMAP_ENABLE = yes
+CAPS_WORD_ENABLE  = yes
 
 INTROSPECTION_KEYMAP_C = keymaps.c # keymaps
 SRC += tlj.c

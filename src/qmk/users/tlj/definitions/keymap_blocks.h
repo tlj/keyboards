@@ -4,6 +4,8 @@
 #include "keycodes.h"
 
 
+#define __________________EMPTY______________  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
+
 #define __________________ALPHA1_L1__________  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
 #define __________________ALPHA1_R1__________  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
 #define __________________ALPHA1_L2__________  KC_ALTA, KC_CTRS, KC_GUID, KC_SHFF, KC_GNAV

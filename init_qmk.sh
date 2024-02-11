@@ -4,8 +4,9 @@ KEYBOARD_HOME="$(pwd)"
 QMK_HOME="$KEYBOARD_HOME/qmk_firmware"
 ZSA_HOME="$KEYBOARD_HOME/zsa_firmware"
 USER_SPACE="$QMK_HOME/users"
+ZSA_USER_SPACE="$ZSA_HOME/users"
 
-KEYBOARDS="cantor ferris reviung/reviung34 splitkb/aurora/sweep"
+KEYBOARDS="cantor ferris reviung/reviung34 splitkb/aurora/sweep bastardkb/charybdis/3x5"
 KEYBOARD_VARIATIONS="cantor/remix"
 
 ZSA_KEYBOARDS="moonlander"
@@ -27,6 +28,11 @@ git submodule update --init --recursive --progress
 if [[ ! -d "${USER_SPACE}/tlj" ]]; then
   echo "Creating userspace symbolic link..."
   ln -s "$KEYBOARD_HOME/src/qmk/users/tlj" "$USER_SPACE"
+fi
+
+if [[ ! -d "${ZSA_USER_SPACE}/tlj" ]]; then
+  echo "Creating ZSA userspace symbolic link..."
+  ln -s "$KEYBOARD_HOME/src/qmk/users/tlj" "$ZSA_USER_SPACE"
 fi
 
 for KEYBOARD_VARIATION in $KEYBOARD_VARIATIONS; do

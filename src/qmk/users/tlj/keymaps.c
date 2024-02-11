@@ -25,8 +25,9 @@ const uint16_t PROGMEM eql_combo[] = {KC_SHFJ, KC_CTRL, COMBO_END};
 const uint16_t PROGMEM plus_combo[] = {KC_SHFJ, KC_CTRL, KC_SYMC, COMBO_END};
 const uint16_t PROGMEM quot_combo[] = {KC_U, KC_I, COMBO_END};
 const uint16_t PROGMEM dquo_combo[] = {KC_U, KC_I, KC_SYMC, COMBO_END};
-const uint16_t PROGMEM copy_combo[] = {KC_NORC, KC_V, COMBO_END};
-const uint16_t PROGMEM past_combo[] = {KC_NORC, KC_V, KC_SYMC, COMBO_END};
+//const uint16_t PROGMEM copy_combo[] = {KC_NORC, KC_V, COMBO_END};
+//const uint16_t PROGMEM past_combo[] = {KC_NORC, KC_V, KC_SYMC, COMBO_END};
+const uint16_t PROGMEM caps_combo[] = {KC_NORC, KC_V, COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(esc_combo, KC_ESC),
@@ -43,7 +44,8 @@ combo_t key_combos[] = {
     COMBO(plus_combo, KC_PLUS),
     COMBO(quot_combo, KC_QUOT),
     COMBO(dquo_combo, KC_DQUO),
-    COMBO(copy_combo, LGUI(KC_C)),
-    COMBO(past_combo, LGUI(KC_V)),
+    COMBO(caps_combo, CW_TOGG),
+//    COMBO(copy_combo, LGUI(KC_C)),
+//    COMBO(past_combo, LGUI(KC_V)),
 };
 

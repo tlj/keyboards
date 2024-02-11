@@ -2,29 +2,10 @@
   Set any config.h overrides for your specific keymap here.
   See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
 */
-#define ORYX_CONFIGURATOR
-#define IGNORE_MOD_TAP_INTERRUPT
 #undef RGB_DISABLE_TIMEOUT
 #define RGB_DISABLE_TIMEOUT 600000
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#undef MOUSEKEY_INTERVAL
-#define MOUSEKEY_INTERVAL 16
-
-#undef MOUSEKEY_WHEEL_DELAY
-#define MOUSEKEY_WHEEL_DELAY 100
-
-#undef MOUSEKEY_DELAY
-#define MOUSEKEY_DELAY 20
-
-#undef MOUSEKEY_TIME_TO_MAX
-#define MOUSEKEY_TIME_TO_MAX 40
-
-#undef MOUSEKEY_WHEEL_INTERVAL
-#define MOUSEKEY_WHEEL_INTERVAL 50
-
-#undef MOUSEKEY_WHEEL_TIME_TO_MAX
-#define MOUSEKEY_WHEEL_TIME_TO_MAX 80
 
 #define NO_AUTO_SHIFT_ALPHA
 #define FIRMWARE_VERSION u8"vmgLL/E7vzY"
