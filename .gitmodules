@@ -1,12 +1,16 @@
 [submodule "qmk_firmware"]
 	path = qmk_firmware
 	url = https://github.com/qmk/qmk_firmware
+  branch = master
 [submodule "zsa_firmware"]
 	path = zsa_firmware
 	url = https://github.com/zsa/qmk_firmware
+  branch = firmware23
 [submodule "zmk"]
 	path = zmk
 	url = https://github.com/tlj/zmk
+  branch = main
 [submodule "zmk-config/zmk-nodefree-config"]
 	path = zmk-config/zmk-nodefree-config
 	url = https://github.com/urob/zmk-nodefree-config.git
+  branch = main
