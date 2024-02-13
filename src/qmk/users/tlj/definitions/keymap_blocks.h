@@ -10,7 +10,7 @@
 #define __________________ALPHA1_R1__________  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
 #define __________________ALPHA1_L2__________  KC_ALTA, KC_CTRS, KC_GUID, KC_SHFF, KC_GNAV
 #define __________________ALPHA1_R2__________  KC_HNUM, KC_SHFJ, KC_GUIK, KC_CTRL, KC_ALTS
-#define __________________ALPHA1_L3__________  KC_Z,    KC_X,    KC_NORC, KC_V,    KC_B
+#define __________________ALPHA1_L3__________  KC_ZMOU, KC_X,    KC_NORC, KC_V,    KC_B
 #define __________________ALPHA1_R3__________  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_ENT
 #define                     ___ALPHA1_L4_____  KC_SYMC, KC_MEHT
 #define ___ALPHA1_R4_____                      KC_MEBS, KC_SYMC

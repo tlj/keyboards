@@ -37,6 +37,7 @@ enum userspace_custom_keycodes {
 #define KC_NORC LT(_NORDIC, KC_C)
 #define KC_SYMC LT(_SYMBOLS, KC_SPC)
 #define KC_SYBS LT(_SYMBOLS, KC_BSPC)
+#define KC_ZMOU LT(_MOUSE, KC_Z)
 #define KC_MEHT MEH_T(KC_TAB)
 #define KC_MEBS LT(_MEDIA, KC_BSPC)
 #define KC_GUIR LGUI(KC_R)
