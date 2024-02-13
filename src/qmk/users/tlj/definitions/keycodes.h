@@ -1,5 +1,6 @@
 #pragma once
 
+#include "quantum_keycodes.h"
 enum layers {
     _DEFAULT,
     _SYMBOLS,
@@ -17,6 +18,10 @@ enum unicode_names {
     OE_UPPER,
     AA_LOWER,
     AA_UPPER,
+};
+
+enum userspace_custom_keycodes {
+    NUMWORD = SAFE_RANGE,
 };
 
 #define KC_ALTA LALT_T(KC_A)
