@@ -1,6 +1,6 @@
 
 .PHONY: all
-all: ferris_sweep cantor_remix reviung34 splitkb_sweep moonlander charybdis_nano
+all: ferris_sweep cantor_remix reviung34 splitkb_sweep moonlander charybdis_nano fc660c
 
 ### Ferris Sweep
 
@@ -60,6 +60,17 @@ charybdis_nano:
 .PHONY: charybdis_nano_flash
 charybdis_nano_flash: charybdis_nano
 	@cd qmk_firmware && make bastardkb/charybdis/3x5/v2/splinky_3:tlj:flash
+
+### Leopold FC660C Topre
+
+.PHONY: fc660c
+fc660c:
+	@echo "Compiling Leopold FC660C Topre tlj keymap..."
+	@cd qmk_firmware && make fc660c:tlj
+
+.PHONY: fc660c_flash
+fc660c_flash: fc660c
+	@cd qmk_firmware && make fc660c:tlj:flash
 
 ### ZSA Moonlander
 

@@ -23,3 +23,6 @@ make all
 - [Reviung34 Split MK.II](https://github.com/gtips/reviung/tree/master/reviung34split_Mk-II) (wireless zmk)
 - [Splitkb Aurora Sweep](https://splitkb.com/products/aurora-sweep)
 - [ZSA Moonlander](https://www.zsa.io/moonlander/)
+- [Charybdis Nano](https://bastardkb.com/product/charybdis-nano-kit/)
+- [Leopold FC660C (Topre) w/hasu controller](https://https://deskthority.net/wiki/Leopold_FC660C)
+

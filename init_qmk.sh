@@ -6,7 +6,7 @@ ZSA_HOME="$KEYBOARD_HOME/zsa_firmware"
 USER_SPACE="$QMK_HOME/users"
 ZSA_USER_SPACE="$ZSA_HOME/users"
 
-KEYBOARDS="cantor ferris reviung/reviung34 splitkb/aurora/sweep bastardkb/charybdis/3x5"
+KEYBOARDS="cantor ferris reviung/reviung34 splitkb/aurora/sweep bastardkb/charybdis/3x5 fc660c"
 KEYBOARD_VARIATIONS="cantor/remix"
 
 ZSA_KEYBOARDS="moonlander"
