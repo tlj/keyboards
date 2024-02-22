@@ -94,6 +94,14 @@ voyager:
 voyager_flash: voyager
 	@cd zsa_firmware && make voyager:tlj:flash
 
+.PHONY: tlj_scotto40
+tlj_scotto40:
+	@cd qmk_firmware && make tlj/scotto40:tlj
+
+.PHONY: tlj_scotto40_flash
+tlj_scotto40_flash: tlj_scotto40
+	@cd qmk_firmware && make tlj/scotto40:tlj:flash
+
 .PHONY: reviung34_zmk
 reviung34_zmk:
 	@cd zmk && \

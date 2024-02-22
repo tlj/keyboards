@@ -14,3 +14,6 @@
 	path = zmk-config/zmk-nodefree-config
 	url = https://github.com/urob/zmk-nodefree-config.git
   branch = main
+[submodule "vial-qmk"]
+	path = vial-qmk
+	url = https://github.com/vial-kb/vial-qmk.git
