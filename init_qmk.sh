@@ -9,7 +9,7 @@ ZSA_USER_SPACE="$ZSA_HOME/users"
 KEYBOARDS="cantor ferris reviung/reviung34 splitkb/aurora/sweep bastardkb/charybdis/3x5 fc660c"
 KEYBOARD_VARIATIONS="cantor/remix"
 
-ZSA_KEYBOARDS="moonlander"
+ZSA_KEYBOARDS="moonlander voyager"
 
 if [[ ! -d "$QMK_HOME" ]]; then
     echo "Add QMK submodule..."

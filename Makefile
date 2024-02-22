@@ -1,6 +1,6 @@
 
 .PHONY: all
-all: ferris_sweep cantor_remix reviung34 splitkb_sweep moonlander charybdis_nano fc660c
+all: ferris_sweep cantor_remix reviung34 splitkb_sweep moonlander charybdis_nano fc660c voyager
 
 ### Ferris Sweep
 
@@ -82,6 +82,17 @@ moonlander:
 .PHONY: moonlander_flash
 moonlander_flash: moonlander
 	@cd zsa_firmware && make moonlander:tlj:flash
+	
+### ZSA Voyager
+
+.PHONY: voyager
+voyager:
+	@echo "Compiling ZSA voyager tlj keymap..."
+	@cd zsa_firmware && make voyager:tlj
+
+.PHONY: voyager_flash
+voyager_flash: voyager
+	@cd zsa_firmware && make voyager:tlj:flash
 
 .PHONY: reviung34_zmk
 reviung34_zmk:

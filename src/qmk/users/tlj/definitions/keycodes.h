@@ -40,6 +40,7 @@ enum userspace_custom_keycodes {
 #define KC_ZMOU LT(_MOUSE, KC_Z)
 #define KC_MEHT MEH_T(KC_TAB)
 #define KC_MEBS LT(_MEDIA, KC_BSPC)
+#define KC_MESC LT(_MEDIA, KC_ESC)
 #define KC_GUIR LGUI(KC_R)
 #define KC_GUIL LGUI(KC_LBRC)
 #define KC_GURB LGUI(KC_RBRC)

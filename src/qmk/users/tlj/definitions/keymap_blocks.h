@@ -6,6 +6,8 @@
 
 #define __________________EMPTY______________  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
 
+#define __________________ALPHA1_L0__________  KC_1,    KC_2,    KC_3,    KC_4,    KC_5
+#define __________________ALPHA1_R0__________  KC_6,    KC_7,    KC_8,    KC_9,    KC_0
 #define __________________ALPHA1_L1__________  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
 #define __________________ALPHA1_R1__________  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
 #define __________________ALPHA1_L2__________  KC_ALTA, KC_CTRS, KC_GUID, KC_SHFF, KC_GNAV
@@ -15,6 +17,8 @@
 #define                     ___ALPHA1_L4_____  KC_SYMC, KC_MEHT
 #define ___ALPHA1_R4_____                      KC_MEBS, KC_SYMC
 
+#define __________________SYMBOL_L0__________  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5
+#define __________________SYMBOL_R0__________  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10
 #define __________________SYMBOL_L1__________  KC_NO,   KC_PERC, KC_LCBR, KC_RCBR, KC_CIRC
 #define __________________SYMBOL_R1__________  KC_AMPR, KC_GRV,  KC_QUOT, KC_NO,   KC_NO
 #define __________________SYMBOL_L2__________  KC_LSFT, KC_AT,   KC_LPRN, KC_RPRN, KC_DLR
