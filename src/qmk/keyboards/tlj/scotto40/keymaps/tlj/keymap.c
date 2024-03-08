@@ -8,7 +8,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __________________ALPHA1_L1__________, __________________ALPHA1_R1__________,
         __________________ALPHA1_L2__________, __________________ALPHA1_R2__________,
         __________________ALPHA1_L3__________, __________________ALPHA1_R3__________,
-                     KC_NO, ___ALPHA1_L4_____, ___ALPHA1_R4_____, KC_NO
+                    KC_ESC, ___ALPHA1_L4_____, ___ALPHA1_R4_____, KC_MUTE
     ),
 	[_SYMBOLS] = LAYOUT_wrapper(
         __________________SYMBOL_L1__________, __________________SYMBOL_R1__________,
@@ -47,3 +47,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      KC_NO, ___NORDIC_L4_____, ___NORDIC_R4_____, KC_NO
     ),
 };
+
+bool encoder_update_kb(uint8_t index, bool clockwise) {
+    if (index == 1) {
+        if (clockwise) {
+            tap_code(KC_VOLU);
+        } else {
+            tap_code(KC_VOLD);
+        }
+    } else if (index == 0) {
+        if (clockwise) {
+            tap_code(KC_A);
+        } else {
+            tap_code(KC_B);
+        }
+    }
+    return true;
+}
