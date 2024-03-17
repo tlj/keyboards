@@ -27,12 +27,13 @@ const uint16_t PROGMEM enter_combo[] = {KC_SHFF, KC_GUID, COMBO_END};
 // const uint16_t PROGMEM plus_combo[] = {KC_SHFJ, KC_CTRL, KC_SYMC, COMBO_END};
 // const uint16_t PROGMEM quot_combo[] = {KC_U, KC_I, COMBO_END};
 // const uint16_t PROGMEM dquo_combo[] = {KC_U, KC_I, KC_SYMC, COMBO_END};
-//const uint16_t PROGMEM copy_combo[] = {KC_NORC, KC_V, COMBO_END};
-//const uint16_t PROGMEM past_combo[] = {KC_NORC, KC_V, KC_SYMC, COMBO_END};
-const uint16_t PROGMEM caps_combo[] = {KC_NORC, KC_V, COMBO_END};
+const uint16_t PROGMEM copy_combo[] = {KC_X, KC_NORC, COMBO_END};
+const uint16_t PROGMEM past_combo[] = {KC_NORC, KC_V, COMBO_END};
+const uint16_t PROGMEM caps_combo[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM num_word_combo[] = {KC_HNUM, KC_SHFJ, COMBO_END};
 const uint16_t PROGMEM arrow_combo[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM dquote_combo[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM tmuxsesh_combo[] = {KC_GUIK, KC_CTRL, COMBO_END};
 
 enum combo_events { 
     C_ESC,
@@ -40,6 +41,9 @@ enum combo_events {
     C_CAPS,
     C_NUMWORD,
     C_DQUOTE,
+    C_TMUXSESH,
+    C_COPY,
+    C_PAST,
     C_ARROW,
 };
 
@@ -49,9 +53,10 @@ combo_t key_combos[] = {
     [C_CAPS] = COMBO(caps_combo, CW_TOGG),
     [C_NUMWORD] = COMBO(num_word_combo, NUMWORD),
     [C_DQUOTE] = COMBO(dquote_combo, KC_DQUO),
-//    COMBO(copy_combo, LGUI(KC_C)),
-//    COMBO(past_combo, LGUI(KC_V)),
+    [C_COPY] = COMBO(copy_combo, LGUI(KC_C)),
+    [C_PAST] = COMBO(past_combo, LGUI(KC_V)),
     [C_ARROW] = COMBO_ACTION(arrow_combo),
+    [C_TMUXSESH] = COMBO_ACTION(tmuxsesh_combo),
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
@@ -59,6 +64,11 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         case C_ARROW:
             if (pressed) {
                 SEND_STRING("->");
+            }
+            break;
+        case C_TMUXSESH:
+            if (pressed) {
+                SEND_STRING(SS_LCTL("e") "T");
             }
             break;
     }
