@@ -34,6 +34,7 @@ const uint16_t PROGMEM num_word_combo[] = {KC_HNUM, KC_SHFJ, COMBO_END};
 const uint16_t PROGMEM arrow_combo[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM dquote_combo[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM tmuxsesh_combo[] = {KC_GUIK, KC_CTRL, COMBO_END};
+const uint16_t PROGMEM tmuxleader_combo[] = {KC_CTRS, KC_GUID, COMBO_END};
 
 enum combo_events { 
     C_ESC,
@@ -42,6 +43,7 @@ enum combo_events {
     C_NUMWORD,
     C_DQUOTE,
     C_TMUXSESH,
+    C_TMUXLEADER,
     C_COPY,
     C_PAST,
     C_ARROW,
@@ -57,6 +59,7 @@ combo_t key_combos[] = {
     [C_PAST] = COMBO(past_combo, LGUI(KC_V)),
     [C_ARROW] = COMBO_ACTION(arrow_combo),
     [C_TMUXSESH] = COMBO_ACTION(tmuxsesh_combo),
+    [C_TMUXLEADER] = COMBO_ACTION(tmuxleader_combo),
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
@@ -69,6 +72,11 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         case C_TMUXSESH:
             if (pressed) {
                 SEND_STRING(SS_LCTL("e") "T");
+            }
+            break;
+        case C_TMUXLEADER:
+            if (pressed) {
+                SEND_STRING(SS_LCTL("e"));
             }
             break;
     }
