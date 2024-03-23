@@ -7,6 +7,7 @@ UNICODE_ENABLE    = no
 UNICODEMAP_ENABLE = yes
 CAPS_WORD_ENABLE  = yes
 USER_NUM_WORD_ENABLE = yes
+TAP_DANCE_ENABLE  = yes
 
 INTROSPECTION_KEYMAP_C = keymaps.c # keymaps
 SRC += tlj.c
@@ -20,4 +21,4 @@ ifeq ($(strip $(USER_NUM_WORD_ENABLE)), yes)
   OPT_DEFS += -DUSER_NUM_WORD_ENABLE
 endif
 
-SRC += process_records.c
+SRC += process_records.c definitions/tap_dances.c
