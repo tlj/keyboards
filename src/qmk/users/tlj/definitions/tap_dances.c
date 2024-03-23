@@ -5,5 +5,5 @@
 tap_dance_action_t tap_dance_actions[] = {
     // Tap once for Escape, twice for Caps Lock
     [TD_COMMA_ASTERISK] = ACTION_TAP_DANCE_DOUBLE(KC_COMM, KC_ASTR),
-    [TD_H_HASH] = ACTION_TAP_DANCE_DOUBLE(KC_HNUM, KC_HASH),
+    //[TD_V_HASH] = ACTION_TAP_DANCE_DOUBLE(KC_V, KC_HASH),
 };
