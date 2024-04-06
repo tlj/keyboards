@@ -1,5 +1,14 @@
 # tlj's keyboard layouts
 
+## Prerequisites
+
+```shell
+
+sudo apt install -y git python3-pip
+python3 -m pip install --user qmk
+qmk setup -H ~/src/keyboards/qmk_firmware
+```
+
 ## Building
 
 Fetch QMK and set up all the symlinks:

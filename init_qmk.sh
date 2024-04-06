@@ -25,34 +25,29 @@ echo "Update git sub-modules..."
 git submodule sync --recursive
 git submodule update --init --recursive --progress
 
-if [[ ! -d "${USER_SPACE}/tlj" ]]; then
-  echo "Creating userspace symbolic link..."
-  ln -s "$KEYBOARD_HOME/src/qmk/users/tlj" "$USER_SPACE"
-fi
+echo "Creating userspace symbolic link..."
+rm -f "${USER_SPACE}/tlj"
+ln -s "$KEYBOARD_HOME/src/qmk/users/tlj" "$USER_SPACE"
 
-if [[ ! -d "${ZSA_USER_SPACE}/tlj" ]]; then
-  echo "Creating ZSA userspace symbolic link..."
-  ln -s "$KEYBOARD_HOME/src/qmk/users/tlj" "$ZSA_USER_SPACE"
-fi
+echo "Creating ZSA userspace symbolic link..."
+rm -f "${ZSA_USER_SPACE}"
+ln -s "$KEYBOARD_HOME/src/qmk/users/tlj" "$ZSA_USER_SPACE"
 
 for KEYBOARD_VARIATION in $KEYBOARD_VARIATIONS; do
-  if [[ ! -d "$QMK_HOME/keyboards/$KEYBOARD_VARIATION" ]]; then
-    echo "Creating keyboard variation symbolic link for $KEYBOARD_VARIATION"
-    ln -s "$KEYBOARD_HOME/src/qmk/keyboards/$KEYBOARD_VARIATION" "$QMK_HOME/keyboards/$KEYBOARD_VARIATION"
-  fi
+  echo "Creating keyboard variation symbolic link for $KEYBOARD_VARIATION"
+  rm -f "$QMK_HOME/keyboards/$KEYBOARD_VARIATION"
+  ln -s "$KEYBOARD_HOME/src/qmk/keyboards/$KEYBOARD_VARIATION" "$QMK_HOME/keyboards/$KEYBOARD_VARIATION"
 done
 
 for KEYBOARD in $KEYBOARDS; do
-  if [[ ! -d "$QMK_HOME/keyboards/$KEYBOARD/keymaps/tlj" ]]; then
-    echo "Creating keyboard symbolic link for $KEYBOARD..."
-    ln -s "$KEYBOARD_HOME/src/qmk/keyboards/$KEYBOARD/keymaps/tlj" "$QMK_HOME/keyboards/$KEYBOARD/keymaps/tlj"
-  fi
+  echo "Creating keyboard symbolic link for $KEYBOARD..."
+  rm -f "$QMK_HOME/keyboards/$KEYBOARD/keymaps/tlj"
+  ln -s "$KEYBOARD_HOME/src/qmk/keyboards/$KEYBOARD/keymaps/tlj" "$QMK_HOME/keyboards/$KEYBOARD/keymaps/tlj"
 done
 
 for KEYBOARD in $ZSA_KEYBOARDS; do
-  if [[ ! -d "$ZSA_HOME/keyboards/$KEYBOARD/keymaps/tlj" ]]; then
-    echo "Creating keyboard symbolic link for $KEYBOARD..."
-    ln -s "$KEYBOARD_HOME/src/qmk/keyboards/$KEYBOARD/keymaps/tlj" "$ZSA_HOME/keyboards/$KEYBOARD/keymaps/tlj"
-  fi
+  echo "Creating keyboard symbolic link for $KEYBOARD..."
+  rm -f "$ZSA_HOME/keyboards/$KEYBOARD/keymaps/tlj"
+  ln -s "$KEYBOARD_HOME/src/qmk/keyboards/$KEYBOARD/keymaps/tlj" "$ZSA_HOME/keyboards/$KEYBOARD/keymaps/tlj"
 done
 
