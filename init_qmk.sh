@@ -30,7 +30,7 @@ rm -f "${USER_SPACE}/tlj"
 ln -s "$KEYBOARD_HOME/src/qmk/users/tlj" "$USER_SPACE"
 
 echo "Creating ZSA userspace symbolic link..."
-rm -f "${ZSA_USER_SPACE}"
+rm -f "${ZSA_USER_SPACE}/tlj"
 ln -s "$KEYBOARD_HOME/src/qmk/users/tlj" "$ZSA_USER_SPACE"
 
 for KEYBOARD_VARIATION in $KEYBOARD_VARIATIONS; do

@@ -22,6 +22,14 @@ Build all keyboards:
 make all
 ```
 
+### Flashing under WSL
+
+If the keyboard has an RP2040 or similar which creates a disk drive when in flash mode, you can use a command like this or similar, then put the keyboard into flash mode:
+
+```
+sleep 10 && sudo mount -t drvfs D: /mnt/d && cp qmk_firmware/splitkb_aurora_sweep_rev1_tlj_liatris.uf2 /mnt/d
+```
+
 ## References
 
 ### Keyboards

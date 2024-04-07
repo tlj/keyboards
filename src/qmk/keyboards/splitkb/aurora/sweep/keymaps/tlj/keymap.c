@@ -53,4 +53,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __________________NORDIC_L3__________, __________________NORDIC_R3__________,
                             ___NORDIC_L4_____, ___NORDIC_R4_____
     ),
+	[_GAMING] = LAYOUT_wrapper(
+        __________________GAMING_L1__________, __________________GAMING_R1__________,
+        __________________GAMING_L2__________, __________________GAMING_R2__________,
+        __________________GAMING_L3__________, __________________GAMING_R3__________,
+                            ___GAMING_L4_____, ___GAMING_R4_____
+    ),
 };

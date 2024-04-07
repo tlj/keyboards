@@ -9,6 +9,7 @@ enum layers {
     _MEDIA,
     _MOUSE,
     _NORDIC,
+    _GAMING,
 };
 
 enum unicode_names {

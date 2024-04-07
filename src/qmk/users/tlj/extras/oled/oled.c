@@ -231,6 +231,11 @@ bool oled_task_user(void) {
             oled_write("Mouse          ", false);
             return false;
             break;
+        case _GAMING:
+            oled_clear();
+            oled_write("Gaming         ", false);
+            return false;
+            break;
     }
 
     render_space_tlj();

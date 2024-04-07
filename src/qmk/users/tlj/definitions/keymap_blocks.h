@@ -40,7 +40,7 @@
 #define __________________NAVIGA_L1__________  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5
 #define __________________NAVIGA_R1__________  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10
 #define __________________NAVIGA_L2__________  KC_LALT, KC_LCTL, KC_LGUI, KC_LSFT, KC_NO
-#define __________________NAVIGA_R2__________  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_NO
+#define __________________NAVIGA_R2__________  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, TG(_GAMING)
 #define __________________NAVIGA_L3__________  KC_F11,  KC_F12,  KC_NO,   KC_NO,   KC_NO
 #define __________________NAVIGA_R3__________  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  TG(_MOUSE)
 #define                     ___NAVIGA_L4_____  KC_NO,   KC_NO
@@ -74,4 +74,15 @@
 #define __________________NORDIC_R3__________  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
 #define                     ___NORDIC_L4_____  KC_NO,   KC_NO
 #define ___NORDIC_R4_____                      KC_NO,   KC_NO
+
+#define __________________GAMING_L0__________  KC_1,    KC_2,    KC_3,    KC_4,    KC_5
+#define __________________GAMING_R0__________  KC_6,    KC_7,    KC_8,    KC_9,    KC_0
+#define __________________GAMING_L1__________  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
+#define __________________GAMING_R1__________  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
+#define __________________GAMING_L2__________  KC_A,    KC_S,    KC_D,    KC_F,    KC_G
+#define __________________GAMING_R2__________  KC_H,    KC_J,    KC_K,    KC_L,    TG(_GAMING)
+#define __________________GAMING_L3__________  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
+#define __________________GAMING_R3__________  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_ENT
+#define                     ___GAMING_L4_____  KC_SPC,  KC_TAB
+#define ___GAMING_R4_____                      KC_BSPC, KC_SPC
 
