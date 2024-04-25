@@ -1,0 +1,12 @@
+file_format: "1"
+id: bluetyl
+name: Bluetyl
+type: shield
+url: https://github.com/tlj/zmk_config/
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
+siblings:
+  - bluetyl_left
+  - bluetyl_right

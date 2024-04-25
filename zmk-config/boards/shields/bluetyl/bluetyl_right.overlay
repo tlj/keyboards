@@ -1,0 +1,26 @@
+#include "bluetyl.dtsi"
+
+&kscan0 {
+  input-gpios
+    = <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+
+    , <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio0 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+
+    , <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+
+    , <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    ;
+};
