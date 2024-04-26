@@ -122,3 +122,19 @@ reviung34_zmk_flash: reviung34_zmk
 	@cd zmk && \
 		west flash
 
+#### Bluetyl
+
+
+.PHONY: bluetyl_left_zmk
+bluetyl_left_zmk:
+	@cd zmk && \
+		export ZEPHYR_SDK_INSTALL_DIR=~/.local/zephyr-sdk-0.15.0 && \
+		export ZEPHYR_TOOLCHAIN_VARIANT=zephyr && \
+		source zephyr/zephyr-env.sh && \
+		export PATH=$$HOME/Library/Python/3.11/bin:$$PATH && \
+		west build --pristine -s zmk/app --board nice_nano_v2 -s ~/src/keyboards/zmk/app -- -DZMK_CONFIG=$$HOME/src/keyboards/zmk-config/config -DSHIELD="bluetyl_left" -DZMK_EXTRA_MODULES="$$HOME/src/keyboards/zmk-config"
+
+.PHONY: bluetyl_left_zmk_flash
+bluetyl_left_zmk_flash: bluetyl_left_zmk
+	@cd zmk && \
+		west flash
