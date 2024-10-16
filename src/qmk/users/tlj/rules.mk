@@ -8,6 +8,7 @@ UNICODEMAP_ENABLE = yes
 CAPS_WORD_ENABLE  = yes
 USER_NUM_WORD_ENABLE = yes
 TAP_DANCE_ENABLE  = no
+DEFERRED_EXEC_ENABLE = yes
 
 INTROSPECTION_KEYMAP_C = keymaps.c # keymaps
 SRC += tlj.c
@@ -19,6 +20,11 @@ endif
 ifeq ($(strip $(USER_NUM_WORD_ENABLE)), yes)
   SRC += features/num_word.c
   OPT_DEFS += -DUSER_NUM_WORD_ENABLE
+endif
+
+ifeq ($(strip $(USER_MOUSE_TURBO_CLICK_ENABLE)), yes)
+  SRC += features/mouse_turbo_click.c
+  OPT_DEFS += -DUSER_MOUSE_TURBO_CLICK_ENABLE
 endif
 
 ifeq ($(strip $(TAP_DANCE_ENABLE)), yes)

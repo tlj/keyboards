@@ -23,6 +23,7 @@ enum unicode_names {
 
 enum userspace_custom_keycodes {
     NUMWORD = SAFE_RANGE,
+    TURBO = SAFE_RANGE,
 };
 
 #define KC_ALTA LALT_T(KC_A)

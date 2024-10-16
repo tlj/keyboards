@@ -49,6 +49,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef USER_NUM_WORD_ENABLE
         process_record_num_word(keycode, record) &&
 #endif
+#ifdef USER_MOUSE_TURBO_CLICK_ENABLE
+        process_mouse_turbo_click(keycode, record, TURBO) &&
+#endif
         true)) {
         return false;
     }

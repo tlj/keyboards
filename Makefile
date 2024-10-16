@@ -77,22 +77,22 @@ fc660c_flash: fc660c
 .PHONY: moonlander
 moonlander:
 	@echo "Compiling ZSA Moonlander tlj keymap..."
-	@cd zsa_firmware && make moonlander:tlj
+	@cd zsa_firmware && make zsa/moonlander:tlj
 
 .PHONY: moonlander_flash
 moonlander_flash: moonlander
-	@cd zsa_firmware && make moonlander:tlj:flash
+	@cd zsa_firmware && make zsa/moonlander:tlj:flash
 	
 ### ZSA Voyager
 
 .PHONY: voyager
 voyager:
 	@echo "Compiling ZSA voyager tlj keymap..."
-	@cd zsa_firmware && make voyager:tlj
+	@cd zsa_firmware && make zsa/voyager:tlj
 
 .PHONY: voyager_flash
 voyager_flash: voyager
-	@cd zsa_firmware && make voyager:tlj:flash
+	@cd zsa_firmware && make zsa/voyager:tlj:flash
 
 .PHONY: tlj_scotto40
 tlj_scotto40:
@@ -138,3 +138,18 @@ bluetyl_left_zmk:
 bluetyl_left_zmk_flash: bluetyl_left_zmk
 	@cd zmk && \
 		west flash
+
+.PHONY: settings_reset_zmk
+settings_reset_zmk:
+	@cd zmk && \
+		export ZEPHYR_SDK_INSTALL_DIR=~/.local/zephyr-sdk-0.15.0 && \
+		export ZEPHYR_TOOLCHAIN_VARIANT=zephyr && \
+		source zephyr/zephyr-env.sh && \
+		export PATH=$$HOME/Library/Python/3.11/bin:$$PATH && \
+		west build --pristine -s zmk/app --board nice_nano_v2 -s ~/src/keyboards/zmk/app -- -DZMK_CONFIG=$$HOME/src/keyboards/zmk-config/config -DSHIELD="settings_reset" -DZMK_EXTRA_MODULES="$$HOME/src/keyboards/zmk-config"
+
+.PHONY: settings_reset_zmk_flash
+settings_reset_zmk_flash: settings_reset_zmk
+	@cd zmk && \
+		west flash
+

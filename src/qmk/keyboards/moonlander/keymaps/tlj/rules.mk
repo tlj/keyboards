@@ -10,4 +10,6 @@ SPACE_CADET_ENABLE = no
 COMBO_ENABLE = yes
 CAPS_WORD_ENABLE  = yes
 
-SRC = matrix.c
+USER_MOUSE_TURBO_CLICK_ENABLE = no
+
+#SRC = matrix.c

@@ -48,6 +48,6 @@ done
 for KEYBOARD in $ZSA_KEYBOARDS; do
   echo "Creating keyboard symbolic link for $KEYBOARD..."
   rm -f "$ZSA_HOME/keyboards/$KEYBOARD/keymaps/tlj"
-  ln -s "$KEYBOARD_HOME/src/qmk/keyboards/$KEYBOARD/keymaps/tlj" "$ZSA_HOME/keyboards/$KEYBOARD/keymaps/tlj"
+  ln -s "$KEYBOARD_HOME/src/qmk/keyboards/$KEYBOARD/keymaps/tlj" "$ZSA_HOME/keyboards/zsa/$KEYBOARD/keymaps/tlj"
 done
 
